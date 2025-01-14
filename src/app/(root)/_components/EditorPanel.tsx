@@ -28,6 +28,7 @@ function EditorPanel() {
     if (editor) editor.setValue(newCode);
   }, [language, editor]);
 
+
   useEffect(() => {
     const savedFontSize = localStorage.getItem("editor-font-size");
     if (savedFontSize) setFontSize(parseInt(savedFontSize));

@@ -130,7 +130,7 @@ export const upgradeToPro = mutation({
     if (!user) throw new Error("User not found");
 
     await ctx.db.patch(user._id, {
-      isPro: true,
+      isPro: false,
       proSince: Date.now(),
       lemonSqueezyCustomerId: args.lemonSqueezyCustomerId,
       lemonSqueezyOrderId: args.lemonSqueezyOrderId,
